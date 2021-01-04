@@ -1,0 +1,16 @@
+server:
+  port: 8033
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: exhibitonline_vhost
+    username: exhibitonline
+    password: exhibitonline
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

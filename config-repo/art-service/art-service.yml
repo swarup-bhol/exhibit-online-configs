@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 20000KB
+      max-request-size: 21000KB
+
+security:
+    oauth2:
+      client:
+        clientId: '{cipher}AQCcrThGaQh7ow1NllU9mAJLbiuUJyIkkwSZw/aL2P9s5trLi44+p+XWa+yCvRlKJ/GWnaf6bJ8e3fcxQ9S0CONPuUPMcCuqtF/e8Lg5wy+BYTmrSkcUI/PY3Tcaorn86cDbhKY3HaFhzWs1nH9HUHRxg1lc1dHmgGWNmBHD+RDrXrIJabzoc1vkY1z+KYxFRfEKHc1waHda7L6aepGsU8Zod4XupZWkzO2mQep+exkYymYiQuJ12C2iUVBAeRD6ygmODMm1Gh4W6dw39aGmTTt1tyU5nrLXccQrWtnZbpIdDJpHsRmgwpYM/2c9KM8TpbW86B0UJvtKpVgcy/e9vfUPCTX+bmXyGxE9CmYvKbnY/B0oYTAGF9JyKwFW+FzN4jA='
+        clientSecret: '{cipher}AQCcrThGaQh7ow1NllU9mAJLbiuUJyIkkwSZw/aL2P9s5trLi44+p+XWa+yCvRlKJ/GWnaf6bJ8e3fcxQ9S0CONPuUPMcCuqtF/e8Lg5wy+BYTmrSkcUI/PY3Tcaorn86cDbhKY3HaFhzWs1nH9HUHRxg1lc1dHmgGWNmBHD+RDrXrIJabzoc1vkY1z+KYxFRfEKHc1waHda7L6aepGsU8Zod4XupZWkzO2mQep+exkYymYiQuJ12C2iUVBAeRD6ygmODMm1Gh4W6dw39aGmTTt1tyU5nrLXccQrWtnZbpIdDJpHsRmgwpYM/2c9KM8TpbW86B0UJvtKpVgcy/e9vfUPCTX+bmXyGxE9CmYvKbnY/B0oYTAGF9JyKwFW+FzN4jA='
+      resource:
+        token-info-uri: http://oauth-server/oauth/check_token
+
+message:
+  arts-uploaded-success: Arts uploaded successfully.
+  art-uploaded-failed: Failed to upload arts.
+  maximum-upload-size-exceeded: The request was rejected because its size exceeds the configured maximum size.
+  upload-file-format-error: Please provide valid file format.
+  invalid-access-token: Invalid access token.
+  access-denied: User is not authorized to access the requested resource.
+  invalid-artId: Art not found.
+  art-updated-success: Art updated successfully.
+  art-updated-failed: Failed to update art.
+  art-details-updated-success: Art details updated successfully.
+  art-details-updated-failed: Failed to update art details.
+
+url:
+  arts-upload-path: src/main/resources/images/arts/
+  media-upload-path: src/main/resources/images/media/

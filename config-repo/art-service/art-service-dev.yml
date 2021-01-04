@@ -1,0 +1,31 @@
+server:
+  port: 8043
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: exhibitonline_vhost
+    username: exhibitonline
+    password: exhibitonline
+  datasource:
+    url: jdbc:mysql://localhost:3306/art_service
+    username: root
+    password: mindfire
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

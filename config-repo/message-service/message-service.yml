@@ -1,0 +1,62 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+  mail:
+    username: exhibitonline2019@gmail.com
+    password: "{cipher}AQCcrThGaQh7ow1NllU9mAJLbiuUJyIkkwSZw/aL2P9s5trLi44+p+XWa+yCvRlKJ/GWnaf6bJ8e3fcxQ9S0CONPuUPMcCuqtF/e8Lg5wy+BYTmrSkcUI/PY3Tcaorn86cDbhKY3HaFhzWs1nH9HUHRxg1lc1dHmgGWNmBHD+RDrXrIJabzoc1vkY1z+KYxFRfEKHc1waHda7L6aepGsU8Zod4XupZWkzO2mQep+exkYymYiQuJ12C2iUVBAeRD6ygmODMm1Gh4W6dw39aGmTTt1tyU5nrLXccQrWtnZbpIdDJpHsRmgwpYM/2c9KM8TpbW86B0UJvtKpVgcy/e9vfUPCTX+bmXyGxE9CmYvKbnY/B0oYTAGF9JyKwFW+FzN4jA="
+    host: smtp.gmail.com
+    port: 587
+    logging: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+        transport:
+          protocol: smtp
+
+# Message Broker Properties
+message-broker:
+  # Account confirmation message
+  confirm-account:
+    exchange-name: message-exchange-confirm-account
+
+    send-queue-name: send-message-queue-confirm-account
+    sent-queue-name: sent-message-queue-confirm-account
+    failed-queue-name: failed-message-queue-confirm-account
+    notify-queue-name: send-notification-queue-confirm-account
+
+    key-send-message: SEND_MESSAGE_CONFIRM_ACCOUNT
+    key-message-sent: MESSAGE_SENT_CONFIRM_ACCOUNT
+    key-message-failed: MESSAGE_FAILED_CONFIRM_ACCOUNT
+    key-message-notify: MESSAGE_NOTIFY_CONFIRM_ACCOUNT
+
+  # Account activation message
+  account-activation:
+    exchange-name: message-exchange-account-activation
+
+    send-queue-name: send-message-queue-account-activation
+    sent-queue-name: sent-message-queue-account-activation
+    failed-queue-name: failed-message-queue-account-activation
+    notify-queue-name: send-notification-queue-account-activation
+
+    key-send-message: SEND_MESSAGE_ACCOUNT_ACTIVATION
+    key-message-sent: MESSAGE_SENT_ACCOUNT_ACTIVATION
+    key-message-failed: MESSAGE_FAILED_ACCOUNT_ACTIVATION
+    key-message-notify: MESSAGE_NOTIFY_ACCOUNT_ACTIVATION
+
+  # Event invitation message
+  event-invitation:
+    exchange-name: message-exchange-event-invitation
+
+    send-queue-name: send-message-queue-event-invitation
+    sent-queue-name: sent-message-queue-event-invitation
+    failed-queue-name: failed-message-queue-event-invitation
+    notify-queue-name: send-notification-queue-event-invitation
+
+    key-send-message: SEND_MESSAGE_EVENT_INVITATION
+    key-message-sent: MESSAGE_SENT_EVENT_INVITATION
+    key-message-failed: MESSAGE_FAILED_EVENT_INVITATION
+    key-message-notify: MESSAGE_NOTIFY_EVENT_INVITATION    

@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+
+message:
+  password_saved_success: Password saved successfully.
+  password_saved_failed: Failed to save password.
+  bad-credential: Invalid username and password.
+  invalid-oauth-client: Invalid Oauth client details.
+  access-token-revoke-success: Access token revoked successfully.
+  access-token-revoke-failed: Failed to revoke access token.
+key:
+  password-initVector: '{cipher}AQARKgGc5kJqhRYEcRqfbinokPFZnk+PBrZUfYm1FsEvOyMy70Q/C2I3XiTrvmv+aWu/SaFmvzGgx6egj4WfFGXOQppld56AgeWqmnHyXqRbFnvSGUCxAHoDI5M+g7DLPysJRlslil1JUcBb8Byuw+0KAxvlvxJJ7U5XS7SzTv1Pe6OhUWF3D1uSsZskLbZ8xVV3ON768aRSaDwyg4U9KzYcEN3HI6FdqO720GDenCt486qRm3XFhf2KEi7N0iNTBQuTMQZzLF0rxXBUolHnfApxMroO7e1M1CPSD9yQDnKfAORw8R2TaZrodq8j1u7xIl/vpvQU8TYMOaSk6JPV/yhfpcGHofYjYASdd2TDwioxZ9JjPRy1M4pe3uJCHmPBp7PNGg+A0bwfizrs+8d7apLP'
+  password-secretKey: '{cipher}AQBMczlYJd6WyNhmC1Qw879gBIBU3oqZgmtlnf+mzVwDsTz8SliAbZ0e724cQM5sRPeYhM+A8OFKWonPMpcTv+HzeD0iboAmtDB6FanwVphqpea2T9jonXHCnt0oLn14iLyXGiOYVNMLCj5yzKpJBmab5UwMypgH5NMbiMaWpsD1JvZihWBQ3uMNLgfDR6N4Z9lEdQUGaObsJpgkmAnZzw10aAPRvuOZx/ynCZ5p+SH1b3aKY+CbGQBm8PyWd5sGdWePed/6+8w7+wXpUBpLm/uaPaL3xC4+6avHOrwjCLiIK8JuUwIE/kQIsbt0Zjz+wUHFpDyK8d4zdZJUgOj4aY17oXFyo76XrVp9a6Q09NwrpoSpQB50D4PqDTDs48uWN8KG32ldm8fpWy8f6kSrTOpp'

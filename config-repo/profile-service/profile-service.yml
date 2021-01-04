@@ -1,0 +1,47 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+
+security:
+    oauth2:
+      client:
+        clientId: '{cipher}AQCcrThGaQh7ow1NllU9mAJLbiuUJyIkkwSZw/aL2P9s5trLi44+p+XWa+yCvRlKJ/GWnaf6bJ8e3fcxQ9S0CONPuUPMcCuqtF/e8Lg5wy+BYTmrSkcUI/PY3Tcaorn86cDbhKY3HaFhzWs1nH9HUHRxg1lc1dHmgGWNmBHD+RDrXrIJabzoc1vkY1z+KYxFRfEKHc1waHda7L6aepGsU8Zod4XupZWkzO2mQep+exkYymYiQuJ12C2iUVBAeRD6ygmODMm1Gh4W6dw39aGmTTt1tyU5nrLXccQrWtnZbpIdDJpHsRmgwpYM/2c9KM8TpbW86B0UJvtKpVgcy/e9vfUPCTX+bmXyGxE9CmYvKbnY/B0oYTAGF9JyKwFW+FzN4jA='
+        clientSecret: '{cipher}AQCcrThGaQh7ow1NllU9mAJLbiuUJyIkkwSZw/aL2P9s5trLi44+p+XWa+yCvRlKJ/GWnaf6bJ8e3fcxQ9S0CONPuUPMcCuqtF/e8Lg5wy+BYTmrSkcUI/PY3Tcaorn86cDbhKY3HaFhzWs1nH9HUHRxg1lc1dHmgGWNmBHD+RDrXrIJabzoc1vkY1z+KYxFRfEKHc1waHda7L6aepGsU8Zod4XupZWkzO2mQep+exkYymYiQuJ12C2iUVBAeRD6ygmODMm1Gh4W6dw39aGmTTt1tyU5nrLXccQrWtnZbpIdDJpHsRmgwpYM/2c9KM8TpbW86B0UJvtKpVgcy/e9vfUPCTX+bmXyGxE9CmYvKbnY/B0oYTAGF9JyKwFW+FzN4jA='
+      resource:
+        token-info-uri: http://oauth-server/oauth/check_token
+
+message:
+  registration-success: Please click on the link, that has been sent to your email account to verify your email and continue the registration process.
+  registration-failed: Unable to register profile.
+  profile-activation-success: Your profile has been activated successfully. Password also changed.
+  profile-activation-failed: Unable to active account.
+  email-exist: Email already exist.
+  valid-token: Token is valid.
+  invalid-token: Invalid token.
+  invalid-userid: User not found.
+  invalid-profileId: Profile not found.
+  message-status-updated-success: Message status updated successfully.
+  message-status-updated-failed: Failed to update message status.
+  profile-attribute-saved-success: Profile attribute added successfully.
+  profile-attribute-saved-failed: Failed to add profile attribute.
+  profile-attribute-value-saved-success: Attribute value saved successfully.
+  profile-attribute-value-saved-failed: Failed to save attribute value.
+  invalid-access-token: Invalid access token.
+  access-denied: User is not authorized to access the requested resource.
+  connection-success: Creator connected successfully.
+  connection-failed: Failed to connect Creator.
+mail:
+  confirm-account:
+    from: exhibitonline2019@gmail.com
+    subject: Confirm Your Exhibit Online Account
+    templateName: confirm-account
+    url: http://172.16.8.177:4200/#/app/password/
+url:
+  oauth_server_save_password: http://oauth-server/savePassword
+  message_service_send_confirm_account_message: http://message-service/sendMessage
+time:
+  # 24h = 86400000 Milliseconds
+  expiration-activeaccount: 86400000ms
+  # 1h = 3600000 Milliseconds
+  expiration-resetpassword: 3600000ms

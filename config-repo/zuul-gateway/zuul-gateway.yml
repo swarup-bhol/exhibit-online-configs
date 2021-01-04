@@ -1,0 +1,50 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 20000KB
+      max-request-size: 21000KB
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 100000
+
+ribbon: 
+  ConnectTimeout: 15000
+  ReadTimeout: 35000
+  eureka: 
+    enabled: true
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  prefix: "/api"
+  ignoredServices: '*'
+  routes:
+    oauth-server:
+      path: /1.0/oauth-server/**
+      service-id: oauth-server
+      strip-prefix: true
+    profile-service:
+      path: /1.0/profile-service/**
+      service-id: profile-service
+      strip-prefix: true
+    message-service:
+      path: /1.0/message-service/**
+      service-id: message-service
+      strip-prefix: true
+    art-service:
+      path: /1.0/art-service/**
+      service-id: art-service
+      strip-prefix: true
+    events-service:
+      path: /1.0/events-service/**
+      service-id: events-service
+      strip-prefix: true
+    
